@@ -6,7 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 
 public class TestSolve {
     @Test
-    @DisplayName("Debe resolver suma simple: 2 + 3 = 5")
+    @DisplayName("Debe resolver suma simple: 2+3 = 5")
 
     public void testSolveSimpleAddition() {
         String formula = "2+3";
@@ -15,7 +15,7 @@ public class TestSolve {
     }
 
     @Test
-    @DisplayName("Debe resolver resta simple: 7 - 4 = 3")
+    @DisplayName("Debe resolver resta simple: 7-4 = 3")
 
     public void testSolveSimpleSubtraction() {
         String formula = "7-4";
@@ -24,7 +24,7 @@ public class TestSolve {
     }
 
     @Test
-    @DisplayName("Debe resolver multiplicación simple: 6 * 3 = 18")
+    @DisplayName("Debe resolver multiplicación simple: 6*3 = 18")
 
     public void testSolveSimpleMultiplication() {
         String formula = "6*3";
@@ -59,13 +59,8 @@ public class TestSolve {
         assertEquals("8-4/2=6", result); // Verifica que se resuelva la división primero
     }
 
-    // Test para Solve con números más grandes
-
-
     @Test
     @DisplayName("Debe resolver correctamente con números grandes: 1000 + 2000 - 500 = 2500")
-
-
     public void testSolveLargeNumbers() {
         String formula = "1000+2000-500";
         String result = Operations.Solve(formula);
@@ -74,7 +69,6 @@ public class TestSolve {
 
     @Test
     @DisplayName("Debe lanzar ArithmeticException al dividir por cero")
-
     public void testDivisionByZero() {
     String formula = "10/0";
     assertThrows(ArithmeticException.class, () -> Operations.Solve(formula));
