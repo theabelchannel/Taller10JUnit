@@ -34,11 +34,5 @@ public class TestMakeFormula {
         assertTrue(formula.matches("[0-9+\\-*/]+"), "La fórmula contiene caracteres no válidos");
     }
 
-    @Test
-    @DisplayName("Imprimir la fórmula generada (propósito de depuración)")
-    public void testPrintFormula() {
-        String formula = Operations.MakeFormula();
-        System.out.println("Fórmula generada: " + formula);
-    }
 }
 
